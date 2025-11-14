@@ -20,6 +20,10 @@ Este repositório contém pequenos exercícios em HTML/CSS e JavaScript usados p
   - Abrir no navegador.
   - Link: [Pessoal/praktika.html](https://github.com/zwei-han-der/atividades/blob/main/Pessoal/praktika.html)
 
+- `bhaskara.js` - Script que implementa a classe `Bhaskara` para calcular as raízes de uma equação quadrática usando a fórmula de Bhaskara. Calcula delta e verifica se existem raízes reais, imprimindo os resultados no console.
+  - Executar: `node "Pessoal/bhaskara.js"`
+  - Link: [Pessoal/bhaskara.js](https://github.com/zwei-han-der/atividades/blob/main/Pessoal/bhaskara.js)
+
 - `estados.html` - Página que demonstra um formulário de seleção de Estados e Cidades. Contém um objeto `estados` com nomes e cidades para cada unidade federativa e carrega jQuery via CDN.
   - Abrir no navegador. Requer conexão com a internet para carregar jQuery do CDN.
   - Link: [Senac/estados.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/estados.html)
