@@ -1,0 +1,156 @@
+<!-- * Website que demonstra um formulário para seleção de Estados e Cidades. Feito para praticar jQUery. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            const estados = {
+              "AC": {
+                "nome": "Acre",
+                "cidades": ["Rio Branco", "Cruzeiro do Sul", "Sena Madureira", "Tarauacá"]
+              },
+              "AL": {
+                "nome": "Alagoas",
+                "cidades": ["Maceió", "Arapiraca", "Palmeira dos Índios", "Rio Largo"]
+              },
+              "AP": {
+                "nome": "Amapá",
+                "cidades": ["Macapá", "Santana", "Laranjal do Jari", "Oiapoque"]
+              },
+              "AM": {
+                "nome": "Amazonas",
+                "cidades": ["Manaus", "Parintins", "Itacoatiara", "Manacapuru"]
+              },
+              "BA": {
+                "nome": "Bahia",
+                "cidades": ["Salvador", "Feira de Santana", "Vitória da Conquista", "Camaçari"]
+              },
+              "CE": {
+                "nome": "Ceará",
+                "cidades": ["Fortaleza", "Caucaia", "Juazeiro do Norte", "Maracanaú"]
+              },
+              "DF": {
+                "nome": "Distrito Federal",
+                "cidades": ["Brasília", "Taguatinga", "Ceilândia", "Samambaia"]
+              },
+              "ES": {
+                "nome": "Espírito Santo",
+                "cidades": ["Vitória", "Vila Velha", "Serra", "Cariacica"]
+              },
+              "GO": {
+                "nome": "Goiás",
+                "cidades": ["Goiânia", "Aparecida de Goiânia", "Anápolis", "Rio Verde"]
+              },
+              "MA": {
+                "nome": "Maranhão",
+                "cidades": ["São Luís", "Imperatriz", "São José de Ribamar", "Timon"]
+              },
+              "MT": {
+                "nome": "Mato Grosso",
+                "cidades": ["Cuiabá", "Várzea Grande", "Rondonópolis", "Sinop"]
+              },
+              "MS": {
+                "nome": "Mato Grosso do Sul",
+                "cidades": ["Campo Grande", "Dourados", "Três Lagos", "Corumbá"]
+              },
+              "MG": {
+                "nome": "Minas Gerais",
+                "cidades": ["Belo Horizonte", "Uberlândia", "Contagem", "Juiz de Fora"]
+              },
+              "PA": {
+                "nome": "Pará",
+                "cidades": ["Belém", "Ananindeua", "Santarém", "Marabá"]
+              },
+              "PB": {
+                "nome": "Paraíba",
+                "cidades": ["João Pessoa", "Campina Grande", "Santa Rita", "Patos"]
+              },
+              "PR": {
+                "nome": "Paraná",
+                "cidades": ["Curitiba", "Londrina", "Maringá", "Ponta Grossa"]
+              },
+              "PE": {
+                "nome": "Pernambuco",
+                "cidades": ["Recife", "Jaboatão dos Guararapes", "Olinda", "Caruaru"]
+              },
+              "PI": {
+                "nome": "Piauí",
+                "cidades": ["Teresina", "Parnaíba", "Picos", "Uruçuí"]
+              },
+              "RJ": {
+                "nome": "Rio de Janeiro",
+                "cidades": ["Rio de Janeiro", "São Gonçalo", "Duque de Caxias", "Nova Iguaçu"]
+              },
+              "RN": {
+                "nome": "Rio Grande do Norte",
+                "cidades": ["Natal", "Mossoró", "Parnamirim", "São Gonçalo do Amarante"]
+              },
+              "RS": {
+                "nome": "Rio Grande do Sul",
+                "cidades": ["Porto Alegre", "Caxias do Sul", "Pelotas", "Santa Maria"]
+              },
+              "RO": {
+                "nome": "Rondônia",
+                "cidades": ["Porto Velho", "Ji-Paraná", "Ariquemes", "Vilhena"]
+              },
+              "RR": {
+                "nome": "Roraima",
+                "cidades": ["Boa Vista", "Rorainópolis", "Caracaraí", "Mucajaí"]
+              },
+              "SC": {
+                "nome": "Santa Catarina",
+                "cidades": ["Florianópolis", "Joinville", "Blumenau", "São José"]
+              },
+              "SP": {
+                "nome": "São Paulo",
+                "cidades": ["São Paulo", "Campinas", "Guarulhos", "São Bernardo do Campo"]
+              },
+              "SE": {
+                "nome": "Sergipe",
+                "cidades": ["Aracaju", "Nossa Senhora do Socorro", "Lagarto", "Itabaiana"]
+              },
+              "TO": {
+                "nome": "Tocantins",
+                "cidades": ["Palmas", "Araguaína", "Gurupi", "Porto Nacional"]
+              }
+            }
+
+            var estadosOptions = "<option value=''>Selecione um Estado</option>"
+
+            <!-- TODO: Adicionar lógica para mostrar estados e cidades -->
+        });
+    </script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        align-content: center;
+        text-align: center;
+        height: 100vh;
+      }
+
+      body {
+        background: #EEAECA;
+        background: radial-gradient(circle,rgba(238, 174, 202, 1) 22%, rgba(148, 187, 233, 1) 76%);
+      }
+    </style>
+  </head>
+  <body>
+      <h1>Selecione um Estado e uma Cidade</h1>
+
+      <label for="estados">Selecione um Estado</label>
+      <select id="estados" name="estados"></select>
+
+      <label for="cidades">Selecione uma Cidade</label>
+      <select id="cidades" name="cidades"></select>
+  </body>
+</html>
