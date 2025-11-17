@@ -142,191 +142,177 @@
         //     }
         // })
 
-        let isEnabled = false;
+      let isEnabled = false;
 
-        $("#btnBody").click(() => {
-          if (!isEnabled) {
-            isEnabled = true;
-
-            $("body").css({
-              background: "linear-gradient(90deg, #d53369 0%, #daae51 100%)",
-            });
-          } else if (isEnabled) {
-            isEnabled = false;
-
-            $("body").css({
-              background:
-                "radial-gradient(circle,rgba(238, 174, 202, 1) 22%, rgba(148, 187, 233, 1) 76%)",
-            });
-          }
-        });
-
-        $(".button").hover(
-          function () {
-            $(this).addClass("hover");
-          },
-          function () {
-            $(this).removeClass("hover");
-          }
-        );
-
-        $("#paragrafo").click(() => {
-          $("#paragrafo").html("Você matou ele...");
-          $("#paragrafo").css({ color: "red" });
-        });
-
-        $("#btnTitle").click(() => {
-          $("#title").css({ color: "green" });
-        });
-
-        $("#footer").on("dblclick", () => {
-          $("#footer").toggleClass("white");
-        });
-
-        $("body").on("scroll", () => {
-          $("header").hide();
-        })
+      $("#btnBody").click(() => {
+        if (!isEnabled) {
+          isEnabled = true;
+          $("body").css({
+            background: "linear-gradient(90deg, #d53369 0%, #daae51 100%)"
+          });
+        } else {
+          isEnabled = false;
+          $("body").css({
+            background:
+              "radial-gradient(circle,rgba(238, 174, 202, 1) 22%, rgba(148, 187, 233, 1) 76%)"
+          });
+        }
       });
-    </script>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      html {
-        align-content: center;
-        text-align: center;
-        height: 100vh;
-      }
+      $(".button").hover(
+        function () { $(this).addClass("hover"); },
+        function () { $(this).removeClass("hover"); }
+      );
 
-      body {
-        background: radial-gradient(
-          circle,
-          rgba(238, 174, 202, 1) 22%,
-          rgba(148, 187, 233, 1) 76%
-        );
-      }
+      $("#paragrafo").click(() => {
+        $("#paragrafo").html("Você matou ele...");
+        $("#paragrafo").css({ color: "red" });
+      });
 
-      main {
-        height: 100%;
-      }
+      $("#btnTitle").click(() => {
+        $("#title").css({ color: "green" });
+      });
 
-      header {
-        padding-top: 1.5rem;
-        background-color: #343a40;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        min-height: 6rem;
-      }
+      $("#footer").on("dblclick", () => {
+        $("#footer").toggleClass("white");
+      });
 
-      nav {
-        vertical-align: middle;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: row;
-      }
+      $(window).on("scroll", () => {
+        if (window.scrollY > 100) {
+          $("#footer").addClass("show");
+        } else {
+          $("#footer").removeClass("show");
+        }
+      });
+    });
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
+    html, body {
+      height: 110%;
+    }
 
-        gap: 0.5rem;
-        list-style-type: none;
-      }
+    .page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-      footer {
-        position: fixed;
-        bottom: 0;
-        user-select: none;
-        width: 100%;
-        min-height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: #343a40;
-      }
+    body {
+      background: radial-gradient(
+        circle,
+        rgba(238, 174, 202, 1) 22%,
+        rgba(148, 187, 233, 1) 76%
+      );
+    }
 
-      .button {
-        background-color: #ffffff;
-        border: 0;
-        border-radius: 0.5rem;
-        box-sizing: border-box;
-        color: #111827;
-        font-family: "Inter var", ui-sans-serif, system-ui, -apple-system,
-          system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-          sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-          "Noto Color Emoji";
-        font-size: 0.875rem;
-        font-weight: 600;
-        line-height: 1.25rem;
-        padding: 0.75rem 1rem;
-        text-align: center;
-        text-decoration: none #d1d5db solid;
-        text-decoration-thickness: auto;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
-          0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        cursor: pointer;
-        user-select: none;
-        -webkit-user-select: none;
-        touch-action: manipulation;
-      }
+    header {
+      padding-top: 1.5rem;
+      background-color: #343a40;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      min-height: 6rem;
+      z-index: 10;
+    }
 
-      .hover {
-        background-color: #edf6f9;
-      }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
 
-      .white {
-        background-color: #faf6f6;
-      }
+    ul {
+      display: flex;
+      gap: 0.5rem;
+      list-style: none;
+    }
 
-      .hs {
-        padding-bottom: 1rem;
-      }
+    main {
+      flex: 1;
+      padding-top: 6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-      .ps {
-        padding-bottom: 1rem;
-      }
-    </style>
-  </head>
-  <body>
+    .hs, .ps {
+      padding-bottom: 1rem;
+    }
+
+    .button {
+      background-color: #fff;
+      border: 0;
+      border-radius: .5rem;
+      color: #111827;
+      font-size: .875rem;
+      font-weight: 600;
+      line-height: 1.25rem;
+      padding: .75rem 1rem;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .hover { background-color: #edf6f9; }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #343a40;
+      color: #fff;
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+    footer.show {
+      transition: transform .3s ease, opacity .3s ease;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .white { background-color: #faf6f6; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="show">
+      <nav id="menu">
+        <div class="title"><h1>jQuery</h1></div>
+        <div class="nav">
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Login</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
     <main>
-      <header>
-        <nav id="menu">
-          <div class="title">
-            <h1>jQuery</h1>
-          </div>
-          <div class="nav">
-            <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Login</li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <div class="hs">
-        <h1 id="title">Clique no meu botão!</h1>
-      </div>
-      <div class="ps">
-        <p id="paragrafo">Clique em mim!</p>
-      </div>
+      <div class="hs"><h1 id="title">Clique no meu botão!</h1></div>
+      <div class="ps"><p id="paragrafo">Clique em mim!</p></div>
       <div class="btns">
-        <button id="btnBody" class="button">
-          Clique para alterar o background
-        </button>
-        <button id="btnTitle" class="button">
-          Clique para alterar a cor do título
-        </button>
+        <button id="btnBody" class="button">Clique para alterar o background</button>
+        <button id="btnTitle" class="button">Clique para alterar a cor do título</button>
       </div>
     </main>
 
     <footer id="footer">Aqui está o footer!</footer>
-  </body>
+  </div>
+</body>
 </html>
+
+
