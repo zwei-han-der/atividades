@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="align-content: center; height: 100vh; text-align: center;"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // ======================================================================== Tabuada
+      // let x = parseInt(prompt("Digite um número para saber a tabuada: "));
+      // alert(`Tabuada:\n\n1 x ${x} = ${1 * x}\n2 x ${x} = ${2 * x}\n3 x ${x} = ${3 * x}\n4 x ${x} = ${4 * x}\n5 x ${x} = ${x}\n6 x ${x} = ${6 * x}\n7 x ${x} = ${7 * x}\n8 x ${x} = ${8 * x}\n9 x ${x} = ${9 * x}\n10 x ${x} = ${10 * x}`);
+
+      // ======================================================================== IMC
+      // let x = Number(prompt("Digite a sua altura (Ex: 175):")); let y = Number(prompt("Digite o seu peso (Ex: 61)"))
+
+      // function imc(x, y) {
+      //   this.x = x, this.y = y
+      //   let calculo = y * (x * x)
+
+      //   if (calculo < 16) {
+      //     return "Indíce de Massa Corporal: " + calculo.toFixed(2)
+      //   }
+      //   return
+      // }
+      // alert(imc(x, y))
+
+      // ======================================================================== Celsius e Fahrenheit
+      // let x = prompt("Você quer descobrir o valor de Celsius ou de Fahrenheit?").trim().toLowerCase();
+
+      // if (x === "celsius") {
+      //   let f = Number(prompt("Digite a quantidade de graus em Fahrenheit:"));
+      //   alert(`${f}F° é equivalente a: ${((f - 32) / 1.8).toFixed(0)}C°`);
+      // } else if (x === "fahrenheit") {
+      //   let c = Number(prompt("Digite a quantidade de graus em Celsius:"));
+
+      //   alert(`${c}C° é equivalente a: ${(1.8 * c + 32).toFixed(2)}F°`);
+      // } else {
+      //   alert("Vai aprender a escrever analfabeto(a)")
+      // }
+
+      // ======================================================================== Desconto
+      // let valor = parseFloat(prompt("Qual o valor da sua compra? "));
+      // let categoria = prompt("Qual a categoria do seu clube? (Escolha entre bronze, prata ou ouro) ");
+      // categoria = categoria.toLowerCase();
+
+      // if (valor < 0) {
+      //   document.write("Você inseriu dados incompatíveis. Tente novamente!")
+      // } else {
+      //   if (categoria == "bronze") {
+      //     document.write(`O valor da sua compra ficou: R$${valor}. Volte sempre!`);
+      //   } else if (categoria == "prata" && valor > 100) {
+      //     let valorDescontado = valor - valor * 0.1;
+
+      //     document.write(`O valor da sua compra ficou: R$${valorDescontado}. Volte sempre!`);
+      //   } else if (categoria == "ouro" && valor > 100) {
+      //     if(valor > 500) {
+      //       let valorDescontado = valor - valor * 0.3;
+
+      //       document.write(`O valor da sua compra ficou: R$${valorDescontado}. Volte sempre!`);
+      //     }
+      //     let valorDescontado = valor - valor * 0.2;
+
+      //     document.write(`O valor da sua compra ficou: R$${valorDescontado}. Volte sempre!`);
+      //   } else {
+      //     document.write("Você inseriu dados incompatíveis. Tente novamente!")
+      //   }
+      // }
+
+      // ======================================================================== Validador de Senha
+
+      // let password = prompt('Digite a sua senha:')
+
+      // let hasUpper = /[A-Z]/.test(password);
+      // let hasNumber = /[0-9]/.test(password);
+      // let hasSpecial = /[!@#$%&*]/.test(password);
+
+      // if (password.length < 8) {
+      //   alert('Senha muito curta. Tente novamente.')
+      // } else if (hasUpper && hasNumber && hasSpecial) {
+      //   document.write('Senha forte');
+      // } else if (hasNumber || hasUpper) {
+      //   document.write('Senha média');
+      // } else {
+      //   document.write('Senha fraca')
+      // }
+
+      // ======================================================================== Validador de Números Primos
+
+      // let num = parseInt(prompt("Insira um número:"));
+
+      // if (num == 0 || num < 0) {
+      //   document.write("Números negativos ou 0 não são aceitos.");
+      // } else {
+      //   ehPrimo(num);
+      // }
+
+      // function ehPrimo(num) {
+      //   let divisores = [];
+
+      //   for (let i = num; i > 0; i--) {
+      //     let divisao = num / i;
+
+      //     if (Number.isInteger(divisao)) {
+      //       divisores.push(divisao);
+      //       console.log(divisores)
+      //     }
+      //   }
+
+      //   if (divisores.length == 2) {
+      //     document.write(`O seu número é primo. Esses são os seus divisores ${divisores.join(" e ")}`);
+      //   } else {
+      //     document.write(`O seu número não é primo. Esses são os seus divisores ${divisores.join(", ")}`);
+      //   }
+      // }
+
+
+      // ======================================================================== Validador de Área Ímpar
+
+      // for (let i = 0; i <= 700; i++) {
+      //   let area = i * i;
+
+      //   if (area % 2 == 1) {
+      //     document.write(`As áreas de valores ímpares são: ${area}<br>`);
+      //   }
+      // }
+
+      // ======================================================================== Raízes quadradas (for)
+
+      // for (let i = 1; i <= 50; i++) {
+      //   document.write(`O resultado da raiz quadrada do radicando ${i} é: ${Math.sqrt(i).toFixed(2)}<br>`)
+      // }
+
+      // ======================================================================== Raízes cúbicas pares (while)
+
+      // let valor = 1
+
+      // while(valor <= 30) {
+      //   if (Math.pow(valor, 3) % 2 == 0) {
+      //     document.write(`O resultado de ${valor}<sup>3</sup> é: ${Math.pow(valor, 3).toFixed(0)}<br>`)
+      //   }
+      //   valor++
+      // }
+
+      // ======================================================================== ?
+
+       // let n = 0
+
+       // do {
+       //   document.write(`${n} elevado a 4 potência é: ${Math.pow(n, 4)}<br>`)
+       //   n++
+       // } while(n <= 20)
+
+    </script>
+  </head>
+  <body></body>
+</html>
