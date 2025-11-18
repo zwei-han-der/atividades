@@ -28,5 +28,53 @@ Este repositório contém pequenos exercícios em HTML/CSS e JavaScript usados p
   - Abrir no navegador. Requer conexão com a internet para carregar jQuery do CDN.
   - Link: [Senac/estados.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/estados.html)
 
+- `adivinhe.html` - Jogo de adivinhação em que o usuário tenta acertar um número aleatório de 1 a 50. O script fornece dicas de acordo com a proximidade do chute em relação ao número sorteado.
+  - Abrir no navegador.
+  - Link: [Senac/adivinhe.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/adivinhe.html)
+
+- `advocacia.html` - Página que calcula o valor de um processo jurídico, aplicando acréscimo de 15% se houver recurso ou desconto de 10% caso contrário, conforme resposta do usuário.
+  - Abrir no navegador.
+  - Link: [Senac/advocacia.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/advocacia.html)
+
+- `cinco-funcoes.html` - Página que executa cinco funções diferentes: soma de dois números, verificação se um número é par, comparação de dois números, conversão de texto para maiúsculo e contagem de itens em uma string.
+  - Abrir no navegador.
+  - Link: [Senac/cinco-funcoes.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/cinco-funcoes.html)
+
+- `contagem.html` - Página que realiza uma contagem regressiva de 20 até 1.
+  - Abrir no navegador.
+  - Link: [Senac/contagem.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/contagem.html)
+
+- `desconto.html` - Página que aplica descontos em uma compra de acordo com a categoria do cliente (bronze, prata ou ouro) e o valor da compra, mostrando o valor final.
+  - Abrir no navegador.
+  - Link: [Senac/desconto.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/desconto.html)
+
+- `jquery.html` - Landing page com header fixo, botões que alteram o background e a cor do título, parágrafo interativo e footer que aparece ao rolar a página. Utiliza jQuery para manipulação dos elementos.
+  - Abrir no navegador.
+  - Link: [Senac/jquery.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/jquery.html)
+
+- `multiplos.html` - Página que exibe todos os números de 0 a 100 que são múltiplos de 3, 5 ou ambos, indicando a qual grupo cada número pertence.
+  - Abrir no navegador.
+  - Link: [Senac/multiplos.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/multiplos.html)
+
+- `primo.html` - Página que verifica se um número fornecido pelo usuário é primo, mostrando também seus divisores.
+  - Abrir no navegador.
+  - Link: [Senac/primo.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/primo.html)
+
+- `senha.html` - Página que avalia a força de uma senha digitada pelo usuário, classificando-a como fraca, média ou forte com base em critérios de tamanho, letras maiúsculas, números e caracteres especiais.
+  - Abrir no navegador.
+  - Link: [Senac/senha.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/senha.html)
+
+- `tabuada.html` - Página que mostra a tabuada de um número informado pelo usuário, de 1 a 10.
+  - Abrir no navegador.
+  - Link: [Senac/tabuada.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/tabuada.html)
+
+- `temperatura.html` - Página que converte valores entre Celsius e Fahrenheit, conforme escolha do usuário.
+  - Abrir no navegador.
+  - Link: [Senac/temperatura.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/temperatura.html)
+
+- `vetores.html` - Página que demonstra operações básicas com vetores: adicionar e remover itens, ordenar alfabeticamente e converter todos os itens para maiúsculo.
+  - Abrir no navegador.
+  - Link: [Senac/vetores.html](https://github.com/zwei-han-der/atividades/blob/main/Senac/vetores.html)
+
 ---
 Arquivo gerado automaticamente para documentar o conteúdo do workspace.
