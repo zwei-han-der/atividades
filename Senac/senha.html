@@ -1,0 +1,25 @@
+<!-- * Website simples que valida se uma senha é fraca ou forte baseado nos testes realizados. Feito para praticar os fundamentos de JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en" style="align-content: center; height: 100vh; text-align: center;">
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      let password = prompt('Digite a sua senha:')
+
+      let hasUpper = /[A-Z]/.test(password);
+      let hasNumber = /[0-9]/.test(password);
+      let hasSpecial = /[!@#$%&*]/.test(password);
+
+      if (password.length < 8) {
+        alert('Senha muito curta. Tente novamente.')
+      } else if (hasUpper && hasNumber && hasSpecial) {
+        document.write('Senha forte');
+      } else if (hasNumber || hasUpper) {
+        document.write('Senha média');
+      } else {
+        document.write('Senha fraca')
+      }
+    </script>
+  </head>
+</html>

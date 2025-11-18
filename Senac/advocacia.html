@@ -1,0 +1,18 @@
+<!-- * Website simples aplica desconto ao valor da causa de acordo com as requisições feitas. Feito para praticar os fundamentos de JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en" style="align-content: center; height: 100vh; text-align: center;">
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      let valor = parseFloat(prompt("Digite o valor da causa:"));
+      let recurso = prompt("Precisa de recurso? ").toLowerCase();
+
+      if(recurso === "sim" || recurso === "s") {
+        return document.write(`O valor total do processo seria ${valor}. Ao utilizar o recuros é adicionado 15% no valor, ou seja, o novo valor será: ${valor + (valor * 0.15)}`)
+      } else {
+        return document.write(`Como o recurso não foi utilizado é aplicado um desconto de 10% no valor. O total deu: ${valor - (valor * 0.1)}`)
+      }
+    </script>
+  </head>
+</html>

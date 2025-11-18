@@ -1,0 +1,36 @@
+<!-- * Website simples que aplica descontos em valor baseado na categoria do cliente. Feito para praticar os fundamentos de JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en" style="align-content: center; height: 100vh; text-align: center;">
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      let valor = parseFloat(prompt("Qual o valor da sua compra? "));
+      let categoria = prompt("Qual a categoria do seu clube? (Escolha entre bronze, prata ou ouro) ");
+      categoria = categoria.trim().toLowerCase();
+
+      if (valor < 0) {
+        document.write("Você inseriu dados incompatíveis. Tente novamente!")
+      } else {
+        if (categoria == "bronze") {
+          document.write(`O valor da sua compra ficou: R$${valor}. Volte sempre!`);
+        } else if (categoria == "prata" && valor > 100) {
+          let valorDescontado = valor - valor * 0.1;
+
+          document.write(`Foi aplicado 10% de desconto e o valor da sua compra ficou: R$${valorDescontado.toFixed(2)}. Volte sempre!`);
+        } else if (categoria == "ouro" && valor > 100) {
+          if(valor > 500) {
+            let valorDescontado = valor - valor * 0.3;
+
+            document.write(`Foi aplicado 30% de desconto e o valor da sua compra ficou: R$${valorDescontado.toFixed(2)}. Volte sempre!`);
+          }
+          let valorDescontado = valor - valor * 0.2;
+
+          document.write(`Foi aplicado 20% de desconto e o valor da sua compra ficou: R$${valorDescontado.toFixed(2)}. Volte sempre!`);
+        } else {
+          document.write("Você inseriu dados incorretos. Tente novamente.")
+        }
+      }
+    </script>
+  </head>
+</html>

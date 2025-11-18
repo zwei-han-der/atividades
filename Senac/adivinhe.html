@@ -1,0 +1,37 @@
+<!-- * Jogo de adivinhação que indica para o usuário se o número aleatória está perto ou não. Feito para praticar os fundamentos de JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en" style="align-content: center; height: 100vh; text-align: center;">
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      let x = Math.floor(Math.random() * 50) + 1;
+      let y = parseInt(prompt("Chute um número de 1 até 50:"))
+
+      if(y < 1 || y > 50) {
+        alert("Você deve escolher um número entre 1 e 50!")
+      }
+
+      while(y != x) {
+        let tamanho = x - y;
+
+        if(tamanho <= 5 && tamanho > 0) {
+          y = parseInt(prompt("Tá fervendo! O número é maior (Escolha enre 1 e 50):"))
+        } else if(tamanho >= -5 && tamanho < 0) {
+          y = parseInt(prompt("Tá fervendo! O número é menor (Escolha enre 1 e 50):"))
+        } else if(tamanho <= 10 && tamanho > 0) {
+          y = parseInt(prompt("Tá quente! O número é maior (Escolha enre 1 e 50):"))
+        } else if(tamanho >= -10 && tamanho < 0) {
+          y = parseInt(prompt("Tá quente! O número é menor (Escolha enre 1 e 50):"))
+        } else if(tamanho >= 10 && tamanho > 0) {
+          y = parseInt(prompt("Tá gelado. O número é maior (Escolha enre 1 e 50):"))
+        } else if(tamanho <= -10 && tamanho < 0) {
+          y = parseInt(prompt("Tá gelado. O número é menor (Escolha enre 1 e 50):"))
+        }
+      }
+
+      document.write(`Parabéns! Você acertou, o número era <strong>${x}</strong>.`)
+
+    </script>
+  </head>
+</html>

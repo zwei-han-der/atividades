@@ -1,0 +1,21 @@
+<!-- * Website simples que mostra todos os números de 0 até 100 que são múltiplos de 3 e 5, indicando se é múltiplo apenas de 3, 5 ou de ambos. Feito para praticar os fundamentos de JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en" style="align-content: center; height: 100vh; text-align: center;">
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      for(let i = 0; i <= 100; i++) {
+        if(Number.isInteger(i / 3) || Number.isInteger(i / 5)) {
+          if(Number.isInteger(i / 3) == true && Number.isInteger(i / 5) == false) {
+            document.write(`${i} é múltiplo de 3.<br>`)
+          } else if((Number.isInteger(i / 3) == false && Number.isInteger(i / 5) == true)) {
+            document.write(`${i} é múltiplo de 5.<br>`)
+          } else if((Number.isInteger(i / 3) == true && Number.isInteger(i / 5) == true)) {
+            document.write(`${i} é múltiplo de 3 e de 5.<br>`)
+          }
+        }
+      }
+    </script>
+  </head>
+</html>

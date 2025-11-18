@@ -1,0 +1,35 @@
+<!-- * Website simples que verifica se o número fornecido á primo baseado em quantos divisores ele tem. Feito para praticar os fundamentos de JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en" style="align-content: center; height: 100vh; text-align: center;">
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      let num = parseInt(prompt("Insira um número:"));
+
+      if (num == 0 || num < 0) {
+        document.write("Números negativos ou 0 não são aceitos.");
+      } else {
+        ehPrimo(num);
+      }
+
+      function ehPrimo(num) {
+        let divisores = [];
+
+        for (let i = num; i > 0; i--) {
+          let divisao = num / i;
+
+          if (Number.isInteger(divisao)) {
+            divisores.push(divisao);
+          }
+        }
+
+        if (divisores.length == 2) {
+          document.write(`O seu número é primo. Esses são os seus divisores ${divisores.join(" e ")}`);
+        } else {
+          document.write(`O seu número não é primo. Esses são os seus divisores ${divisores.join(", ")}`);
+        }
+      }
+    </script>
+  </head>
+</html>

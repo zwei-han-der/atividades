@@ -1,0 +1,48 @@
+<!-- Website que possui uma função para cada requerimento feito. Feito para praticar os fundamentos de JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en" style="align-content: center; height: 100vh; text-align: center">
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      const sum = () => {
+        let x = parseInt(prompt("Digite o primeiro número da soma:"));
+        let y = parseInt(prompt("Digite o segundo número da soma:"));
+
+        return document.write(`A soma entre ${x} e ${y} é igual a ${x + y}`)
+      }
+
+      const isEven = () => {
+        let x = parseInt(prompt("Digite o número que você quer saber se é par:"));
+
+        return x % 2 == 0 ? document.write(`O número ${x} é par.`) : document.write(`O número ${x} não é par.`)
+      }
+
+      const whichHigher = () => {
+        let x = parseInt(prompt("Digite o primeiro número da verificação:")); let y = parseInt(prompt("Digite o segundo número da verificação:"));
+
+        if(x > y) {
+          return document.write(`${x} é maior que ${y}.`)
+        } else if(y > x) {
+          return document.write(`${y} é maior que ${x}.`)
+        }
+      }
+
+      const toUpper = () => {
+        let string = prompt("Escreva o texto que você quer deixar em maiúsculo:")
+        let upper = string.toUpperCase();
+
+        return document.write(`${string} -> ${upper}`)
+      }
+
+      const howMany = () => {
+        let string = prompt("Escreva os itens que você deseja contar (separados por espaços):")
+        let array = string.split(" ")
+
+        return document.write(`Possui ${array.length} itens no seu texto.<br>`)
+      }
+
+      sum(); document.write("<br> ---------------------------------------------------------------------------- <br>"); isEven(); document.write("<br> ---------------------------------------------------------------------------- <br>"); whichHigher(); document.write("<br> ---------------------------------------------------------------------------- <br>"); toUpper(); document.write("<br> ---------------------------------------------------------------------------- <br>"); howMany();
+    </script>
+  </head>
+</html>

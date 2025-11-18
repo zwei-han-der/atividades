@@ -1,0 +1,23 @@
+<!-- * Website simples que realiza a conversão de Celsius para Fahrenheit ou vice e versa. Feito para praticar os fundamentos de JavaScript. -->
+
+<!DOCTYPE html>
+<html lang="en" style="align-content: center; height: 100vh; text-align: center;">
+  <head>
+    <meta charset="UTF-8">
+    <script>
+      let x = prompt("Você quer descobrir o valor de Celsius ou de Fahrenheit?").trim().toLowerCase();
+
+      if (x === "celsius") {
+        let f = Number(prompt("Digite a quantidade de graus em Fahrenheit:"));
+
+        document.write(`${f}F° é equivalente a: <strong>${((f - 32) / 1.8).toFixed(0)}C°</strong>`);
+      } else if (x === "fahrenheit") {
+        let c = Number(prompt("Digite a quantidade de graus em Celsius:"));
+
+        document.write(`${c}C° é equivalente a: <strong>${(1.8 * c + 32).toFixed(0)}F°</strong>`);
+      } else {
+        alert("Vai aprender a escrever analfabeto(a)")
+      }
+    </script>
+  </head>
+</html>
