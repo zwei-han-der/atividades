@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -120,9 +120,29 @@
               }
             }
 
-            var estadosOptions = "<option value=''>Selecione um Estado</option>"
+            var estadoOptions = "<option value=''>Selecione um Estado</option>";
 
-            <!-- TODO: Adicionar lógica para mostrar estados e cidades -->
+            $("#cidades").html("<option>Selecione uma Cidade</option>" + "<option>Selecione o Estado primeiro</option>")
+
+            $.each(estados, (sigla, estado) => {
+                estadoOptions += `<option value="${sigla}">${estado.nome}</option>`
+            });
+            $("#estados").html(estadoOptions)
+
+            $("#estados").change(function() {
+                var siglaEstado = $(this).val();
+                var cidadesOptions = "<option>Selecione uma Cidade</option>";
+
+                if (siglaEstado) {
+                    var cidades = estados[siglaEstado].cidades;
+
+                    $.each(cidades, (i, cidades) => {
+                        cidadesOptions += `<option value="${cidades}">${cidades}</option>`
+                    });
+
+                    $("#cidades").html(cidadesOptions)
+                }
+            })
         });
     </script>
     <style>
